@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portal</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .marksheet{
+            background-color:cornflowerblue;
+            width:30%;
+            margin-left: 20%;
+            box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+        }
+        input{
+            border-radius: 5px;
+            border-color: cornsilk;
+        }
+    </style>
+    <script>
+        function jfunc1(){
+            var name = frm1.txt1.value;
+            var maths = eval(frm1.m1.value);
+            var eng = eval(frm1.m2.value);
+            var hindi = Number (frm1.m3.value);
+            var science = parseInt(frm1.m4.value);
+
+            frm1.tmarks.value = maths+eng+hindi+science;
+            frm1.pmarks.value = (maths+eng+hindi+science)/4;
+            frm1.mmarks.value = Math.max(maths,eng,hindi,science);
+            frm1.mimarks.value = Math.min(maths,eng,hindi,science);
+            return false;
+        }
+    </script>
+
+</head>
+<body>
+    <div class="first-div"> Live Virtual Class</div>
+    <nav>
+        <a href="index.html">Home</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="about.html">About Us</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="courses.html">Courses</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="registration.html">Registration</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Contact.html">Contact Us</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="marksdetails.html">Mark Details</a>
+    </nav>
+
+    <h2>LVC Participants Marksdetails</h2>
+    <div class="marksheet" data-tilt>
+        <form name=frm1 onsubmit="return jfunc1()">          
+            <table>
+                <tr>
+                    <td> Name:</td>
+                    <td><input type="text" name="txt1"></td>
+                </tr>
+                <tr>    
+                    <td colspan="2"> Marks:</td>
+                </tr>
+                <tr>
+                    <td> Maths:</td>
+                    <td>  <input type="number" name=m1 min=0 max=100> </td>
+                </tr>
+                <tr> 
+                    <td> English:</td> 
+                    <td> <input type="number" name = m2 min=0 max=100></td>
+                </tr>
+                <tr> 
+                    <td> Hindi:</td>
+                    <td> <input type="number" name = m3 min=0 max=100> </td>
+                </tr>
+                <tr>
+                    <td>Science:</td> 
+                    <td> <input type="number" name=m4 min=0 max=100></td>
+                </tr>
+                <tr>
+                    <td colspan=2>Result:</td>
+                </tr>
+                <tr>
+                    <td> Total Marks:</td>
+                    <td> <input type="number" name=tmarks></td>
+                </tr>
+                <tr>
+                    <td> %marks:</td>
+                    <td><input type="number" name=pmarks></td>
+                </tr>
+                <tr>
+                    <td>MAX Marks:</td> 
+                    <td> <input type="number" name=mmarks></td>
+                </tr> 
+                <tr>
+                    <td>MIN Marks:</td> 
+                    <td> <input type="number" name=mimarks></td>
+                </tr> 
+                <tr>
+                    <td><input type="submit" value="Result"></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+
+
+    <div>
+        <h3>
+            <pre>
+                MEAN Stack <p>
+                           MERN STack <p>
+                                    Java Full STack <p>
+                                            .NET Full STack     
+        </pre>
+    </div>
+    <footer>This is the First Page: Deepak Gupta</footer>
+    <script rel="text/javascript" href="js/vanilla-tilt.js"></script>
+</body>
+</html>

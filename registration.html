@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portal</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="first-div">Live Virtual Class</div>
+    <nav>
+        <a href="index.html">Home</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="about.html">About Us</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="courses.html">Courses</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="registration.html">Registration</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Contact.html">Contact Us</a>
+    </nav>
+    
+    Name<input type="text"  id="t1" onblur="jfunc()">
+    Designation<input type="text"  id="t2">
+
+
+    <input type="button" id="i1" value="Testing" onmousedown=start() onmouseup= end()>
+    <script>
+        function jfunc(){
+            var name = document.getElementById("t1").value;
+            if(name==""){
+                alert("YOU MISSED THE NAME");
+                setTimeout(()=>t1.focus(),1);
+                //t1.focus();
+                console.log("1");
+            }
+
+            else{
+                t2.focus();
+                console.log("2")
+            }
+        }
+    </script>
+    <script>
+        var start_time;
+function start() {
+    start_time = new Date();
+}
+function end() {
+    var now = new Date();
+    alert(eval(now-start_time)+" milliseconds");
+}
+
+    </script>
+
+    <footer>This is the First Page: Deepak Gupta</footer>
+</body>
+</html>
